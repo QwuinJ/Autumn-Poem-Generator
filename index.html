@@ -1,39 +1,38 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Webbed site</title>
-        <link rel="stylesheet" href="Styles/styles.css">
-    </head>
-<body onload="firstPage()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webbed site</title>
+    <link rel="stylesheet" href="Styles/styles.css" />
+  </head>
+  <body onload="firstPage()">
     <div class="site-wrapper">
-        <header class="site-header">
-            <div class="site-header-inner">
-                <div class="header-left">POEM GENERATOR</div>
-                <div class="header-center">x</div>
-                <div class="header-right">x</div>
-            </div>
-        </header>
-        <div class="site-inner">
-            <main class="content">
-                <div class="content-column">
-                    <h2 id="left-header"></h2>
-                    <p id="left-content"></p>
-                    </div>
-                <div class="content-column">
-                    <div id="poembox"></div>
-                    <button id="start-button" class="start" >Click to start</button>
-                    <div id="placeholder"></div>
-                </div>
-            </main>
+      <header class="site-header">
+        <div class="site-header-inner">
+          <div class="header-left">POEM GENERATOR</div>
+          <div class="header-center">x</div>
+          <div class="header-right">x</div>
         </div>
-        
+      </header>
+      <div class="site-inner">
+        <main class="content">
+          <div class="content-column" id="content-column-left">
+            <h2 id="left-header"></h2>
+            <p id="left-content"></p>
+          </div>
+          <div class="content-column" id="content-column-right">
+            <br />
+            <div id="poembox"></div>
+            <button id="start-button" class="start">Click to start</button>
+            <div id="placeholder"></div>
+            <br />
+          </div>
+        </main>
+      </div>
     </div>
     <footer class="footer-outer">
-        <div class="footer-inner">
-
-        </div>
+      <div class="footer-inner"></div>
     </footer>
     <script src="Scripts/script.js"></script>
-</body>
+  </body>
 </html>
