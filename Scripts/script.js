@@ -200,8 +200,8 @@ function newScreen() {
     let x = document.getElementById("placeholder");
     let startButton = document.getElementById("start-button");
     x.innerHTML = "";
-    leftHeader.innerHTML= "Generated Poem";
-    leftContent.innerHTML = "";
+    leftHeader.innerHTML= "List of Poems";
+    leftContent.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur labore velit error accusantium dicta voluptas quia ipsam, quibusdam at architecto ipsa, nostrum, magni tempora? Odio non labore facere atque dolore?";
     startButton.innerHTML = "Click here to restart";
     startButton.onclick = firstPage;
     newP();
@@ -220,10 +220,12 @@ function firstPage() {
 // function to return new poem
 
 function newP () {
-    let leftContent = document.getElementById("left-content");
+    let poembox = document.getElementById("poembox");
+    let poemHolder = document.createElement("p");
     for (let value of newPoem) {
         line = document.createElement("p");
         line.innerHTML = value;
-        leftContent.append(line);
+        poemHolder.append(line);
     }
+    poembox.appendChild(poemHolder);
 }
