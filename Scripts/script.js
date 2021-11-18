@@ -108,6 +108,32 @@ let newPoem = [];
 let userName = [];
 let userAge = [];
 
+function start() {
+    makeNameBox();
+    makeButton();
+}
+
+function makeNameBox() {
+    let x = document.getElementById("placeholder");
+    x.innerHTML = "";
+    let nameBox = document.createElement("input");
+    let ageBox = document.createElement("input");
+    nameBox.placeholder = "Name..."
+    nameBox.id = "name";
+    ageBox.placeholder = "Age..."
+    ageBox.id = "age";
+    x.appendChild(nameBox);
+    x.appendChild(ageBox);
+}
+
+function makeButton() {
+    let x = document.getElementById("placeholder");
+    let nextButton = document.createElement("button");
+    nextButton.innerHTML = "Press here to generate a poem";
+    nextButton.onclick = insert;
+    x.appendChild(nextButton);
+}
+
 // function to clear place for poem
 function empty () {
     document.getElementById("poem").innerHTML = "";
@@ -165,17 +191,39 @@ function makePoem () {
         newPoem.push(`${randomLine}`);
     }
     console.log(newPoem);
+    newScreen();
+}
+
+function newScreen() {
+    let leftHeader = document.getElementById("left-header");
+    let leftContent = document.getElementById("left-content");
+    let x = document.getElementById("placeholder");
+    let startButton = document.getElementById("start-button");
+    x.innerHTML = "";
+    leftHeader.innerHTML= "Generated Poem";
+    leftContent.innerHTML = "";
+    startButton.innerHTML = "Click here to restart";
+    startButton.onclick = firstPage;
+    newP();
+}
+
+function firstPage() {
+    let leftHeader = document.getElementById("left-header");
+    let leftContent = document.getElementById("left-content");
+    let startButton = document.getElementById("start-button");
+    leftHeader.innerHTML= "Intro to the poem";
+    leftContent.innerHTML = "Welcome to the poem generator. This will generate a poem for you, based on your name and age. It will shuffle a selection of autumn poems, and return the result. Click the button on the right to get started.";
+    startButton.innerHTML = "Click here to start";
+    startButton.onclick = start;
 }
 
 // function to return new poem
 
 function newP () {
-    empty();
-    let n = document.getElementById("poemButt")
-    n.style.visibility = "hidden";
+    let leftContent = document.getElementById("left-content");
     for (let value of newPoem) {
-        para = document.createElement("p")
-        para.innerHTML = value;
-        document.getElementById("poem").append(para);
+        line = document.createElement("p");
+        line.innerHTML = value;
+        leftContent.append(line);
     }
 }

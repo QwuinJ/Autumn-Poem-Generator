@@ -5,28 +5,34 @@
         <title>Webbed site</title>
         <link rel="stylesheet" href="Styles/styles.css">
     </head>
-<body>
+<body onload="firstPage()">
     <div class="site-wrapper">
-    <div id="header"> 
-        <h1>Autumn Poem Generator</h1> 
+        <header class="site-header">
+            <div class="site-header-inner">
+                <div class="header-left">POEM GENERATOR</div>
+                <div class="header-center">x</div>
+                <div class="header-right">x</div>
+            </div>
+        </header>
+        <div class="site-inner">
+            <main class="content">
+                <div class="content-column">
+                    <h2 id="left-header"></h2>
+                    <p id="left-content"></p>
+                    </div>
+                <div class="content-column">
+                    <button id="start-button" class="start" >Click to start</button>
+                    <div id="placeholder"></div>
+                </div>
+            </main>
+        </div>
+        
     </div>
-    <div class="container">
-        <form>
-            <label for="user_name" id="name-label">Name:</label>
-            <input type="text" id="name" placeholder="Name" required>
-            <label for="user_age" id="age-label">Age:</label>
-            <input type="text" id="age" placeholder="Age" required>
-            <input type="button" id="submit" value="Save" onclick="insert()">
-        </form>
-            <button id="poemButt" onclick="newP()">Click to generate poem</button>
-            <p id="poem" name="poem" placeholder="Poem" >
-            </p>
-            <input type="reset" id="reset" value="Reset" onclick="empty()">
-    </div>
-    </div>
-    <div id="footer">
+    <footer class="footer-outer">
+        <div class="footer-inner">
 
-    </div>
+        </div>
+    </footer>
     <script src="Scripts/script.js"></script>
 </body>
 </html>

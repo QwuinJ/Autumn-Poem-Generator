@@ -1,3 +1,7 @@
+/* V2
+- Update 
+*/
+
 *{
     box-sizing: border-box;
 }
@@ -13,29 +17,86 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: url("Images/leaves.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    font-size: 16pt;
     /* background-color: rgb(148, 66, 36); */
 }
 
 .site-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+    /* display: flex; */
+    color: black;
+    background-color: white;
+    /* background-image: url("Images/leaves.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
 }
 
-h2 {
-    font-size: 20pt;
-    font-weight: bold;
+.site-header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+    color: white;
 }
+
+.site-header-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-left {
+    font-size: xx-large;
+}
+
+.header-center {
+    width: 300px;
+    text-align: right;
+}
+
+.site-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    height: fit-content;
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    background-color: white;
+    align-content: center;
+    text-align: justify;
+    text-justify: inter-word;
+    justify-content: center;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content-column {
+    padding: 20px;
+    border: 10px solid white;
+    margin: 10px;
+    color: black;
+    flex: 1;
+}
+
+.footer-outer {
+    background-color: black;
+    height: 10vh;
+}
+
+
 
 button {
     height: fit-content;
-    width: fit-content;
+    width: 40vw;
     background-color: firebrick;
     color: white;
     font-size: 20pt;
@@ -57,108 +118,15 @@ button:active{
     transform: translateY(2px);
 }
 
+
 input {
     height: fit-content;
-    width: 95%;
+    width: 40vw;
     padding: 10px;
     margin: 10px;
     font-size: 16pt;
     border:0;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid rgba(204, 137, 137, 0.3);
     border-radius: 5px;
     box-shadow: 0 0 5px 4px rgba(204, 137, 137, 0.3);
-}
-
-label {
-    font-size: 16pt;
-    padding-left: 10px;
-}
-
-p {
-    font-size: 16pt;
-    border: firebrick 3px;
-    padding: 5px;
-}
-
-form {
-    padding-top: 10px;
-}
-
-#reset {
-    color: white;
-    height: 50px;
-    font-size: 16pt;
-    background-color: rgb(78, 3, 107);
-    border-radius: 5px;
-    border: forestgreen 3px;
-    text-align: center;
-    box-shadow: 0 5px #999;
-}
-
-#reset:hover {
-    background-color: rgb(50, 1, 70);
-}
-
-#reset:active {
-    background-color: rgb(50, 1, 70);
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
-}
-
-#submit {
-    color: white;
-    height: 50px;
-    font-size: 16pt;
-    background-color: forestgreen;
-    border-radius: 5px;
-    border: forestgreen 3px;
-    text-align: center;
-    box-shadow: 0 5px #999;
-}
-
-#submit:hover {
-    background-color: rgb(18, 77, 18);
-}
-
-#submit:active {
-    background-color: rgb(18, 77, 18);
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
-}
-
-#header{
-    padding: 20px;
-    text-align: center;
-    /* background-color: orangered; */
-    color: orangered;
-    background-color: white;
-    width: 50vw;
-    height: 20vh;
-    margin: 10px;
-    border: 10px solid rgb(255, 241, 233);
-    border-radius: 15px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    max-width: 75vw;
-    height: fit-content;
-    margin: 0 auto;
-    background-color: white;
-}
-
-.container > div {
-    justify-content: center;
-    text-align: center;
-    flex-basis: 100%;
-    padding: 10px;
-    background-color: white;
-}
-
-
-#footer {
-    /* background-color: orangered; */
-    color: white;
-    height: 20vh;
 }
