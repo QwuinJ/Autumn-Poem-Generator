@@ -171,6 +171,8 @@ function makePoem () {
 
 function newP () {
     empty();
+    let n = document.getElementById("poemButt")
+    n.style.visibility = "hidden";
     for (let value of newPoem) {
         para = document.createElement("p")
         para.innerHTML = value;
