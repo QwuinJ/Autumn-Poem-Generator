@@ -233,6 +233,7 @@ function newP() {
     line.innerHTML = value;
     poemHolder.append(line);
   }
+  poembox.style.textAlign = "left";
   poembox.appendChild(poemHeader);
   poembox.appendChild(poemHolder);
 }
